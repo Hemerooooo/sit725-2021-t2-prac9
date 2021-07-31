@@ -14,7 +14,11 @@ socket.on('number', (msg) => {
 console.log('test')
 $(document).ready(function(){
   console.log('Ready')
-  
+  $('.modal').modal();
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
   //bind the button
   $('#testButton').click(testButtonFunction)
 

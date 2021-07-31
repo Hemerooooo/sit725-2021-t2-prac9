@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alex's Boiler Plate</title>
+    <title>Security Draft page</title>
 
     <!-- Compiled and minified CSS -->
     <!-- Materialze-->
@@ -20,14 +20,15 @@
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper" style=" background-color: #9E65A9;">
-                <a href="#" class="brand-logo" style="height: 100%;">
-                    <img src="assets/ale.jpg" alt="" class="circle responsive-img"
-                        style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
-
-                </a>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://www.linkedin.com/in/alessiobonti">Linkedin</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="showcase.html">Sucess case</a></li>
+                    <!-- <a id="signIn" class="waves-effect waves-light btn-large">Login/Sign up</a> -->
+                    <li><button data-target="signup_modal" class="waves-effect waves-light btn-large modal-trigger">
+                            Login/Sign up</button></li>
                 </ul>
             </div>
         </nav>
@@ -35,26 +36,91 @@
     <main>
 
         <div class="container">
-            <h1 class="title">Alex NExUs</h1>
+            <h1 class="title">LND Security</h1>
             <div class="row">
-                <p class="flow-text mainText">This is a basic boilerplate i have created based on Node Express and
-                    Materialize, I hope it will help you develop your next project!</p>
+                <p class="flow-text mainText">Fast, reliable, comprehensive security consultant</p>
             </div>
-            <div class="row center" style="height: 150px;">
-                <img src="assets/ale2.jpg" alt="" class="circle responsive-img"
-                    style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
+            <!-- Introduction -->
+            <div class="row">
+                <div class="col s6">
+                    <h1>About us</h1>
+                    <p></p>
+                </div>
+                <div class="col s6">
+                    <img src="https://9b74456f2e4bcbc20970-51751c7e8fb38e7c8b474cab6c7dc602.ssl.cf5.rackcdn.com/2021-02/module_2a_6.png"
+                        width="600">
+                </div>
             </div>
-            <div class="row center " style="padding-top:50px;">
-                <a id="testButton" class="waves-effect waves-light btn-large " style="background-color: #9E65A9;"><i
-                        class="material-icons left" style="color:white font-size:larger">emoji_people</i>Click me!</a>
-            </div>
-        </div>
+            <!-- Carousel service page -->
+            <div class="row">
+                <div class="col s6">
 
+                    <div class="carousel carousel-slider center">
+                        <div class="carousel-fixed-item center">
+                            <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                        </div>
+                        <div class="carousel-item red white-text" href="#one!">
+                            <h2>First Panel</h2>
+                            <p class="white-text">This is your first panel</p>
+                        </div>
+                        <div class="carousel-item amber white-text" href="#two!">
+                            <h2>Second Panel</h2>
+                            <p class="white-text">This is your second panel</p>
+                        </div>
+                        <div class="carousel-item green white-text" href="#three!">
+                            <h2>Third Panel</h2>
+                            <p class="white-text">This is your third panel</p>
+                        </div>
+                        <div class="carousel-item blue white-text" href="#four!">
+                            <h2>Fourth Panel</h2>
+                            <p class="white-text">This is your fourth panel</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col s6">
+                    <h1>Service</h1>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Free code validation service -->
+            <div class="row">
+                <div class="col s12">
+                    <h2 class="center">Vulnerability detection</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Free trial to have a code validation</span>
+                            <p>Just leave the git URL of your project here to have a try to validation.</p>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="git_url" name="git_url" type="text" class="validate">
+                                    <label for="git_url">URL</label>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row center" style="height: 150px;">
+                <img src="assets/ale2.jpg" alt="" class="circle responsive-img"
+                    style="height: 100%;padding-top: 5px; padding-left: 15px;"> notice the "circle" class -->
+                <!-- </div> -->
+                <!-- <div class="row center " style="padding-top:50px;">
+                <a id="testButton" class="waves-effect waves-light btn-large " style="background-color: #9E65A9;"><i
+                        class="material-icons left" style="color:white; font-size:larger">emoji_people</i>Click me!</a>
+            </div> -->
+            </div>
     </main>
     <footer class="page-footer">
         <div class="footer-copyright">
             <div class="container">
-                © 2020 Copyright AlexNexus
+                © 2020 Copyright Miaoxuan
                 <a class="grey-text text-lighten-4 right" href="https://github.com/alexbonti/node-material"><img
                         src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;"></i>Boiler plate here !</a>
             </div>
@@ -77,3 +143,78 @@
 </body>
 
 </html>
+<!-- Sign up Modal Structure -->
+<div id="signup_modal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" name="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" name="last_name" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email_sign_up" type="email" name="email_sign_up" class="validate">
+                        <label for="email_sign_up">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="user_name_signup" type="text" name="user_name_signup" class="validate">
+                        <label for="user_name_signup">User name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password_signup" type="password" name="password_sign_up" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password_check" type="password" name="password_check" class="validate">
+                        <label for="password">Check password</label>
+                    </div>
+                </div>
+
+                <button class="btn-large waves-effect waves-light" type="submit" name="sign_up">Sign up
+                </button>
+            </form>
+            <div class="modal-footer">
+                <p><i>Aleady have an account?</i></p>
+                <button data-target="login_modal" class="waves-effect waves-light btn modal-trigger">Login here</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal Structure -->
+<div id="login_modal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="user_name_or_email" type="text" name="user_name_or_email" class="validate">
+                        <label for="user_name_or_email">User name or Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password_login" type="password" name="password_login" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <button class="btn-large waves-effect waves-light" type="submit" name="login">Login
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
