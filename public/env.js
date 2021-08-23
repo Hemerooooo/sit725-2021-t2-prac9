@@ -24,26 +24,20 @@ const newUploading=()=>{
 }
 
 const requestUploading=()=>{
-  $.get('/api/uploadings',(submissions)=>{
-    if(submissions.length>0){
-      console.log(submissions);
-      listSubmissions(submissions);
-    }
+  $.get('/api/uploadings',(uploadings)=>{
+    // if(uploadings.length>0){
+      // let codes = uploadings.data;
+      if(uploadings.length> 0){
+        console.log(uploadings);
+      listSubmissions(uploadings);
+      }
   })
 }
-// const savedData = {
-//   title:'abc',
-//   author: 'James',
-//   language: 'Java, HTML',
-//   url: '1234'
-// }
-
-// let submissions=[savedData,savedData];
 
 listSubmissions=(submissions)=>{
   submissions.forEach(submission =>{
     console.log(submission)
-    let item='<div class="card blue-grey darken-1">'+
+    let item='<div class="card blue-grey darken-1 col s6">'+
     '<h2 class="center">Successful validation</h2>'+
     // '<div class="card blue-grey darken-1">'+
         '<div class="card-content white-text">'+
@@ -56,7 +50,6 @@ listSubmissions=(submissions)=>{
             '<a class="btn waves-effect white grey-text darken-text-2">details</a>'+
         '</div>'+
     '</div>'+
-'</div>'+
     '<div id="listSubmissions"></div>'
     $('#listSubmissions').append(item)
   })
@@ -72,15 +65,15 @@ socket.on('number', (msg) => {
 
 console.log('test')
 $(document).ready(function(){
-  console.log('Ready');
   requestUploading();
+  console.log('Ready');
   // listSubmissions(submissions);
   $('select').formSelect();
   $('.modal').modal();
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
+  // $('.carousel.carousel-slider').carousel({
+  //   fullWidth: true,
+  //   indicators: true
+  // });
   // newUploading();
 
 })
