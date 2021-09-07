@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
   });
   setInterval(()=>{
     socket.emit('number', parseInt(Math.random()*10));
-  }, 1000);
+  }, 3000);
 
 });
 

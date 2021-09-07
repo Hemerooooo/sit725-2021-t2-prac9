@@ -61,6 +61,7 @@ let socket = io();
 
 socket.on('number', (msg) => {
     console.log('Random number: ' + msg);
+    $("#socketTitle").html("LND Security" + msg);
 })
 
 console.log('test')
